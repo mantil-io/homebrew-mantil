@@ -5,20 +5,22 @@
 class Mantil < Formula
   desc "Mantil CLI"
   homepage ""
-  version "0.1.1"
+  version "0.1.2"
   bottle :unneeded
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mantil-io/mantil/releases/download/v0.1.1/mantil_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "a7dc4fa7058a3acdc19391054f69d0a3988760dbc4e5193a7c0a38a6e2d88876"
+      url "https://github.com/mantil-io/mantil/releases/download/v0.1.2/mantil_0.1.2_Darwin_x86_64.tar.gz"
+      sha256 "770c2e8b43a76b47402a710989c611ec5eac59a53d14a6d3db2e873552d24495"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mantil-io/mantil/releases/download/v0.1.1/mantil_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "ae73844d928e3f790f6d149d2bbbeab19f82cee3ac1d236cc0cab7371693578f"
+      url "https://github.com/mantil-io/mantil/releases/download/v0.1.2/mantil_0.1.2_Darwin_arm64.tar.gz"
+      sha256 "417dea286f3ab153e073c21ab5a0eb581580f4ebdd68732407d976db95a214d5"
     end
   end
+
+  depends_on "go"
 
   def install
     bin.install "mantil"
