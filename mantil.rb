@@ -11,12 +11,12 @@ class Mantil < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mantil-io/mantil/releases/download/v0.1.2/mantil_0.1.2_Darwin_x86_64.tar.gz"
-      sha256 "770c2e8b43a76b47402a710989c611ec5eac59a53d14a6d3db2e873552d24495"
+      url "https://github.com/mantil-io/mantil/releases/download/v0.1.2/mantil_0.1.2_Darwin_x86_64.tar.gz", :using => S3DownloadStrategy
+      sha256 "31d4cb6a6be20a30097021a1402f23ea47f06156128bed80e6e39aa46d489931"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mantil-io/mantil/releases/download/v0.1.2/mantil_0.1.2_Darwin_arm64.tar.gz"
-      sha256 "417dea286f3ab153e073c21ab5a0eb581580f4ebdd68732407d976db95a214d5"
+      url "https://github.com/mantil-io/mantil/releases/download/v0.1.2/mantil_0.1.2_Darwin_arm64.tar.gz", :using => S3DownloadStrategy
+      sha256 "6094acf2a6d98d355b5f865992910897eb4ff2e9767e62194ff043d2b94a621a"
     end
   end
 
