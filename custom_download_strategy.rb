@@ -6,7 +6,7 @@ class S3DownloadStrategy < CurlDownloadStrategy
     super
   end
 
-  def _fetch(url:, resolved_url:)
+  def _fetch(url:, resolved_url:, timeout:nil)
     if url !~ %r{^https?://([^.].*)\.s3\.amazonaws\.com/(.+)$} &&
        url !~ %r{^s3://([^.].*?)/(.+)$}
       raise "Bad S3 URL: " + url
