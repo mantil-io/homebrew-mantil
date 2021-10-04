@@ -5,18 +5,18 @@
 class Mantil < Formula
   desc "Mantil CLI"
   homepage ""
-  version "0.1.8"
+  version "0.1.9"
   bottle :unneeded
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://mantil-downloads.s3.eu-central-1.amazonaws.com/releases/cli/v0.1.8/mantil_0.1.8_Darwin_x86_64.tar.gz"
-      sha256 "a727bac1be8a3f759c2d05059f8174b5745a8dd49e4f8daf522ef182093dbc03"
+      url "https://mantil-downloads.s3.eu-central-1.amazonaws.com/releases/cli/v0.1.9/mantil_0.1.9_Darwin_x86_64.tar.gz"
+      sha256 "803b9b6f087531ec4976b0af7eaff82e5401951d29293b285794188d745946a1"
     end
     if Hardware::CPU.arm?
-      url "https://mantil-downloads.s3.eu-central-1.amazonaws.com/releases/cli/v0.1.8/mantil_0.1.8_Darwin_arm64.tar.gz"
-      sha256 "f0ba2b22a89c372504b805f092f89237f525b1c873bc500488094a59d261de3a"
+      url "https://mantil-downloads.s3.eu-central-1.amazonaws.com/releases/cli/v0.1.9/mantil_0.1.9_Darwin_arm64.tar.gz"
+      sha256 "26fe145ea35e4cf1df6c4fa724c3cc25bf93967442a7e4f848197a213ebc535c"
     end
   end
 
