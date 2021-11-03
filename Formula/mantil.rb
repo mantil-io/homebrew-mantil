@@ -5,45 +5,34 @@
 class Mantil < Formula
   desc "Mantil CLI"
   homepage ""
-  version "0.1.14"
+  version "0.1.16"
+  bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "releases.mantil.io/v0.1.14/mantil_0.1.14_Darwin_arm64.tar.gz"
-      sha256 "bbaff89bd1c268c1e0c22024681184401d311725fbecce43d5d7cd08f93504af"
-
-      def install
-        bin.install "mantil"
-      end
-    end
     if Hardware::CPU.intel?
-      url "releases.mantil.io/v0.1.14/mantil_0.1.14_Darwin_x86_64.tar.gz"
-      sha256 "0211da9f62f76721ebb1351803477c1ed5dfb0b5a1421c25c8e7889da5a15d7a"
-
-      def install
-        bin.install "mantil"
-      end
+      url "releases.mantil.io/v0.1.16/mantil_0.1.16_Darwin_x86_64.tar.gz"
+      sha256 "02a8e22fcba28a85f5cc304e70ff7f3ec9a94847e874940ac21a7cf77e5cbeb8"
+    end
+    if Hardware::CPU.arm?
+      url "releases.mantil.io/v0.1.16/mantil_0.1.16_Darwin_arm64.tar.gz"
+      sha256 "5aff2ed2fd6b64389599e76f9e8901fea9f932c107efe303b47cf057dee3d5e7"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "releases.mantil.io/v0.1.14/mantil_0.1.14_Linux_arm64.tar.gz"
-      sha256 "9b24893f88aefe1a4fc842af11e1a33aec6d118e62eaf43e147d3992cd303253"
-
-      def install
-        bin.install "mantil"
-      end
-    end
     if Hardware::CPU.intel?
-      url "releases.mantil.io/v0.1.14/mantil_0.1.14_Linux_x86_64.tar.gz"
-      sha256 "f39a25e7b37f726867af85f193274fcca77df47398ff6636d77278e2b4398fdb"
-
-      def install
-        bin.install "mantil"
-      end
+      url "releases.mantil.io/v0.1.16/mantil_0.1.16_Linux_x86_64.tar.gz"
+      sha256 "de1583b96a773a4c77c7817d861bab15375d771dc0670dc157d9343cc15a56de"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "releases.mantil.io/v0.1.16/mantil_0.1.16_Linux_arm64.tar.gz"
+      sha256 "983108ccd5f7f457b23e336180c529af7f9668fa536d21436b04317dce2ffef7"
     end
   end
 
   depends_on "go"
+
+  def install
+    bin.install "mantil"
+  end
 end
