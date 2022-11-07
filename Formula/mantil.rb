@@ -5,15 +5,15 @@
 class Mantil < Formula
   desc "Go Development Toolkit for AWS"
   homepage "https://www.mantil.com"
-  version "0.2.11"
+  version "0.2.12"
   license "MIT"
 
   depends_on "go"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "releases.mantil.io/v0.2.11/mantil_0.2.11_Darwin_arm64.tar.gz"
-      sha256 "61f06abf3f55e8a361e8cf0ea8b182f4f402ee70d55e6cae07e9326de31ef4da"
+      url "releases.mantil.io/v0.2.12/mantil_0.2.12_Darwin_arm64.tar.gz"
+      sha256 "41042db160aeaf46c9dfbc2c505ec319b6bb34171c00ed253be65b20b15e0159"
 
       def install
         bin.install "mantil"
@@ -30,8 +30,8 @@ class Mantil < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "releases.mantil.io/v0.2.11/mantil_0.2.11_Darwin_x86_64.tar.gz"
-      sha256 "c380b8cd6061cd58dfe895df38254f618cdecde188dded59eaa21dec123f3c3d"
+      url "releases.mantil.io/v0.2.12/mantil_0.2.12_Darwin_x86_64.tar.gz"
+      sha256 "a89cb58e69d5f9d268bb6117b1e2071aff70fc44394d4403ae7a0498fc581fae"
 
       def install
         bin.install "mantil"
@@ -51,8 +51,8 @@ class Mantil < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "releases.mantil.io/v0.2.11/mantil_0.2.11_Linux_armv6.tar.gz"
-      sha256 "aae035158ba8bdf162068153b3f3e1dc987e60aba5a22c4cc2189c6ab712f11b"
+      url "releases.mantil.io/v0.2.12/mantil_0.2.12_Linux_armv6.tar.gz"
+      sha256 "0fa468da54425a5568e9eb5a1e5a9442370eced46ab2cee0a39d90ab35c5c73d"
 
       def install
         bin.install "mantil"
@@ -69,8 +69,8 @@ class Mantil < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "releases.mantil.io/v0.2.11/mantil_0.2.11_Linux_arm64.tar.gz"
-      sha256 "2c2258f1345dab39d35d694a85957dae5498e1664900e7e9a861437371f5a5a9"
+      url "releases.mantil.io/v0.2.12/mantil_0.2.12_Linux_arm64.tar.gz"
+      sha256 "bcc3c5d4238f7f466ac41f2a1ea247d84f0e470b1a2628dd15f07caf847bde8d"
 
       def install
         bin.install "mantil"
@@ -87,8 +87,8 @@ class Mantil < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "releases.mantil.io/v0.2.11/mantil_0.2.11_Linux_x86_64.tar.gz"
-      sha256 "3f09a1266bee5c644eeb55f18429e1adc204c3e50f5120c5b5aea8bb9c74e153"
+      url "releases.mantil.io/v0.2.12/mantil_0.2.12_Linux_x86_64.tar.gz"
+      sha256 "47ad19970718839d3d6d333bc4c88528a5dceac2a8e2773e719d9274aae8ea05"
 
       def install
         bin.install "mantil"
